@@ -37,28 +37,28 @@ input5.grid(column=3,row=0)
 input6 = tk.Entry(window)
 input6.grid(column=3,row=1)
 def tinh_toan():
-    x1 = int(input1.get())
-    y1 = int(input2.get())
-    x2 = int(input3.get())
-    y2 = int(input4.get())
-    b1 = int(input3.get())
-    b2 = int(input4.get())
-    A = np.array([(x1,y1),(x2,y2)])
-    B = np.array([b1,b2])
-    A1  = np.linalg.inv(A) # tạo ma trận nghich đảo
-    print(A)
-    print(B)
-    print(A1)
-    X = np.dot(A1,B)
-    print('Nghiem cua he:',X)
+    try:
+        x1 = int(input1.get())
+        y1 = int(input2.get())
+        x2 = int(input3.get())
+        y2 = int(input4.get())
+        b1 = int(input3.get())
+        b2 = int(input4.get())
+        A = np.array([(x1,y1),(x2,y2)])
+        B = np.array([b1,b2])
+        A1  = np.linalg.inv(A) # tạo ma trận nghich đảo
+
+        X = np.dot(A1,B)
+        kq.set(f'Nghiem cua he:{X}')
+    except:
+        kq.set('error')   
 # Create button
 submit_btn = tk.Button(window, text="tinh", command= tinh_toan)
-submit_btn.grid(column=0,row=3,rowspan=3)
+submit_btn.grid(column=0,row=3)
 
 kq = tk.StringVar()
-kq.set("hihi")
 kq_label = tk.Label(window, textvariable=kq)
-kq_label.grid(column=0,row=4,rowspan=3)
+kq_label.grid(column=0,row=4,columnspan=4)
 print("test")
 # Run the event loop
 window.mainloop()
