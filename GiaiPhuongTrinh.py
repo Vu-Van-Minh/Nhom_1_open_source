@@ -59,7 +59,6 @@ submit_btn.grid(column=0,row=3)
 kq = tk.StringVar()
 kq_label = tk.Label(window, textvariable=kq)
 kq_label.grid(column=0,row=4,columnspan=4)
-print("test")
 # Run the event loop
 window.mainloop()
 
