@@ -46,19 +46,16 @@ def tinh_toan():
     A = np.array([(x1,y1),(x2,y2)])
     B = np.array([b1,b2])
     A1  = np.linalg.inv(A) # tạo ma trận nghich đảo
-    print(A)
-    print(B)
-    print(A1)
+
     X = np.dot(A1,B)
-    print('Nghiem cua he:',X)
+    kq.set(f'Nghiem cua he:{X}')
 # Create button
 submit_btn = tk.Button(window, text="tinh", command= tinh_toan)
 submit_btn.grid(column=0,row=3)
 
 kq = tk.StringVar()
-kq.set("hihi")
 kq_label = tk.Label(window, textvariable=kq)
-kq_label.grid(column=0,row=4,columnspan=3)
+kq_label.grid(column=0,row=4,columnspan=4)
 
 # Run the event loop
 window.mainloop()
