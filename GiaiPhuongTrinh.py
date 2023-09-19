@@ -50,7 +50,7 @@ def tinh_toan():
 
         X = np.dot(A1,B)
         kq.set(f'Nghiem cua he:{X}')
-     except:
+    except:
         kq.set('error')   
 # Create button
 submit_btn = tk.Button(window, text="tinh", command= tinh_toan)
