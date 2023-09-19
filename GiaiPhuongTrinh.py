@@ -59,7 +59,7 @@ kq = tk.StringVar()
 kq.set("hihi")
 kq_label = tk.Label(window, textvariable=kq)
 kq_label.grid(column=0,row=4,rowspan=3)
-
+print("test")
 # Run the event loop
 window.mainloop()
 
