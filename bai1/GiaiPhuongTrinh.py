@@ -11,11 +11,11 @@ window.geometry('600x400')
 window.title("Input Form")
 
 # Create labels
-label1 = tk.Label(window, text="Puong trinh 1:")
+label1 = tk.Label(window, text="Phuong trinh 1:")
 label1.grid(column=0,row=0)
 
 
-label4 = tk.Label(window, text="Puong trinh 2:")
+label4 = tk.Label(window, text="Phuong trinh 2:")
 label4.grid(column=0,row=1)
 
 # Create entry fields
